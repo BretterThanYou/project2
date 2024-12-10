@@ -1,0 +1,76 @@
+/* Home.css */
+
+/* Main container for the page */
+.home-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Slideshow container */
+  .slideshow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    max-width: 80%; /* Ensures slideshow doesn't take up the entire width */
+    height: auto;
+  }
+  
+  /* Slideshow image container */
+  .slideshow-image-container {
+    flex: 1;
+    overflow: hidden; /* Prevents image overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px; /* Optional: Set a maximum width for the slideshow */
+  }
+  
+  /* Images in the slideshow */
+  .slideshow-image {
+    max-width: 100%; /* Ensures the image fits within the container */
+    height: auto; /* Maintains the image's aspect ratio */
+    border-radius: 8px; /* Optional: Rounds the corners of the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for better contrast */
+  }
+  
+  /* Navigation buttons */
+  .slideshow-btn {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .slideshow-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  }
+  
+  /* Positioning the buttons */
+  .slideshow-btn.prev {
+    position: absolute;
+    left: -40px; /* Adjust distance from the image */
+  }
+  
+  .slideshow-btn.next {
+    position: absolute;
+    right: -40px; /* Adjust distance from the image */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .slideshow {
+      flex-direction: column;
+    }
+  
+    .slideshow-btn {
+      position: static;
+      margin: 10px;
+    }
+  }

@@ -1,0 +1,59 @@
+/* ModalWindow.css */
+
+/* Modal backdrop (semi-transparent background) */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden; /* Prevents scrolling when modal is open */
+}
+
+/* Modal container */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%; /* Ensures modal is responsive */
+  max-width: 600px; /* Limits modal width */
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Ensures content doesn't overflow the modal */
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  z-index: 10; /* Ensures it stays on top of the image */
+}
+
+/* Image in the modal */
+.modal-image {
+  max-width: 100%; /* Ensures the image fits within the container width */
+  max-height: 400px; /* Prevents the image from being too tall */
+  height: auto; /* Maintains aspect ratio */
+  margin: 15px 0;
+  border-radius: 8px; /* Optional: Rounds the image corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+/* Text description */
+.modal-content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
